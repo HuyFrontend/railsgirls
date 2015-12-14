@@ -1,0 +1,54 @@
+<!-- <form
+    id="login-form"
+    ng-submit="loginCtrl.submit(loginForm.$valid)"
+    name="loginForm">
+  <fieldset>
+    <legend>Login</legend>
+    <div class="error-message">
+      <div ng-if="!!loginCtrl.hasLoginError()">{{loginCtrl.loginError}}</div>
+      <div ng-if="loginForm.$submitted || loginForm.name.$touched"
+           ng-messages="loginForm.name.$error">
+        <div ng-message="required">You did not enter your username!</div>
+      </div>
+      <div ng-if="loginForm.$submitted || loginForm.password.$touched"
+           ng-messages="loginForm.password.$error">
+        <div ng-message="required">You did not enter a password!</div>
+      </div>
+    </div>
+    <label>
+      <span
+          ng-class="{'error': loginForm.name.$touched && loginForm.name.$invalid}">
+        Username
+      </span>
+      <input
+          type="text"
+          name="name"
+          ng-model="loginCtrl.user.name"
+          required
+          autofocus
+          />
+    </label>
+    <label>
+      <span
+          ng-class="{'error': loginForm.name.$touched && loginForm.name.$invalid}">
+        Password
+      </span>
+      <input
+          type="password"
+          name="password"
+          ng-model="loginCtrl.user.password"
+          required
+          />
+    </label>
+
+    <button
+        type="submit"
+        class="main-button"
+        >Login
+    </button>
+
+    <p class="info">Username: "Luke" Password: "Skywalker"</p>
+
+  </fieldset>
+</form>
+ -->
