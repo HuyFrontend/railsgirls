@@ -1,6 +1,6 @@
-angular.module('cafeTownsend').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('AngularApp').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider.when('/login', {
-      templateUrl: '/assets/login.html',
+      templateUrl: '/assets/templates/login.html',
       controller: 'LoginController',
       controllerAs: 'loginCtrl'
     }).when('/employees', {
