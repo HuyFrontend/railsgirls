@@ -1,5 +1,7 @@
 <div ng-controller='validateCtrl'>
-  <%= form_for @idea, :html=>{:class=>'form', :name=>'myForm', :'novalidate'=>'', :'ng-submit'=>'submitForm()' } do |f| %> 
+<div>
+<!-- , :'ng-submit'=>'submitForm()' -->
+  <%= form_for @idea, :html=>{:class=>'form', :name=>'myForm', :'novalidate'=>'' } do |f| %> 
     <% if @idea.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
@@ -11,16 +13,16 @@
         </ul>
       </div>
     <% end %>
-
+     <%= @idea.description %>
     <div class="form-group">
       <%= f.label :name %><br>
-      <%= f.text_field :name, :class => 'form-control', :required=>'', :'form-element-directive'=>'' %>
+      <%= f.text_field :name, :'init-value'=>@idea.name, :'ng-model'=>'idea.name', :class => 'form-control', :required=>'' %>
       <p ng-show="myForm.name.$invalid && !myForm.name.$pristine" class="help-block">You name is required.</p>
     </div>
 
     <div class="form-group">
       <%= f.label :description %><br>
-      <%= f.text_area :description, :class => 'form-control', :required=>'',:'ng-model'=>'message', :'form-element-directive'=>'' %>
+      <%= f.text_area :description, :'init-value'=>@idea.description, :'ng-model'=>'idea.description', :class => 'form-control', :required=>'' %>
     </div>
 
     <div class="form-group">
@@ -34,4 +36,5 @@
 
     </div>
   <% end %>
+</div>
 </div>

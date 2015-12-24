@@ -59,12 +59,9 @@ app.directive('formElementDirective', function() {
         var getter, setter, val;
         val = $attrs.ngInitial || $attrs.value;
         if($attrs.ngModel) {
-        console.log($attrs);
           getter = $parse($attrs.ngModel);
           setter = getter.assign;
           setter($scope, val);
-          console.log('scope', $scope);
-          console.log('val', val);
         }
       }
     ]
